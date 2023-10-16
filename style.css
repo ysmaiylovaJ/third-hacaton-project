@@ -1,0 +1,250 @@
+* {
+    box-sizing: border-box;
+  }
+  html {
+    font-family: sans-serif;
+  }
+  body {
+    margin: 0;
+    background-image: url("https://wallup.net/wp-content/uploads/2016/03/09/247911-Up_movie-sunset-balloons-house-moon-crescent_moon-clouds.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  button:focus {
+    outline: none;
+  }
+  header {
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2.5rem;
+    background: #00329E;
+  }
+  header h1 {
+    margin: 0;
+    color: white;
+    font-size: 1.5rem;
+  }
+  header button {
+    font: inherit;
+    padding: 0.5rem 1rem;
+    background: #F67722;
+    border: 1px solid #F67722;
+    color: white;
+    border-radius: 6px;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.26);
+    cursor: pointer;
+  }
+  header button:hover,
+  header button:active {
+    background: #F3CC4B;
+    border-color: #F3CC4B;
+    color: #995200;
+  }
+  label {
+    font-weight: bold;
+    margin: 0.5rem 0;
+    color: #464646;
+  }
+  input {
+    font: inherit;
+    border: 1px solid #ccc;
+    padding: 0.4rem 0.2rem;
+    color: #383838;
+  }
+  input:focus {
+    outline: none;
+    background: #FFF1C4;
+  }
+  .btn {
+    font: inherit;
+    padding: 0.5rem 1.5rem;
+    border: 1px solid #00329E;
+    background: #00329E;
+    color: white;
+    border-radius: 6px;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.26);
+    cursor: pointer;
+    margin: 0 0.5rem;
+  }
+  .btn-edit{
+    font: inherit;
+    padding: 0.5rem 1.5rem;
+    border: 1px solid #00329E;
+    background: #00329E;
+    color: white;
+    border-radius: 6px;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.26);
+    cursor: pointer;
+    margin: 0 0.5rem;
+  }
+  
+  .btn-edit:hover{
+    background-color: #F67722;
+    border: none;
+  }
+  .btn:hover,
+  .btn:active {
+    background: #F67722;
+    border-color: #F67722;
+  }
+  .btn--passive {
+    color: #00329E;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+  }
+  .btn--passive:hover,
+  .btn--passive:active {
+    background: #AEC6F8;
+  }
+  .btn--danger {
+    background: #D30808;
+    color: white;
+    border-color: #D30808;
+  }
+  .btn--danger:hover,
+  .btn--danger:active {
+    background: #FF3217;
+    border-color: #FF3217;
+  }
+  .modal {
+    position: fixed;
+    z-index: 100;
+    background: white;
+    border-radius: 10px;
+    width: 80%;
+    top: 30vh;
+    left: 10%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+    display: none;
+  }
+  .modal.visible {
+    display: block;
+    animation: fade-slide-in 0.3s ease-out forwards;
+  }
+  .modal .modal__title {
+    margin: 0;
+    padding: 1rem;
+    border-bottom: 1px solid #00329E;
+    background: #00329E;
+    color: white;
+    border-radius: 10px 10px 0 0;
+  }
+  .modal .modal__content {
+    padding: 1rem;
+  }
+  .modal .modal__actions {
+    padding: 1rem;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .movie-element {
+    background-color: #ed7f0174;
+    margin: 1rem 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+    border-radius: 10px;
+    display: flex;
+  }
+  
+  .movie-element h2,
+  .movie-element p {
+    font-size: 1.25rem;
+    margin: 0;
+  }
+  .movie-element h2 {
+    color: #f0d62a;
+    margin-bottom: 1rem;
+  }
+  .movie-element p {
+    color: white;
+    display: inline;
+    background: #F67722;
+    padding: 0.25rem 1rem;
+    border-radius: 15px;
+  }
+  .movie-element__image {
+    flex: 1;
+    border-radius: 10px 0 0 10px;
+    overflow: hidden;
+  }
+  .movie-element__image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  .movie-element__info {
+    flex: 2;
+    padding: 1rem;
+  }
+  .card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  }
+  #entry-text {
+    width: 40rem;
+    margin: 2rem auto;
+    max-width: 80%;
+    padding: 1rem;
+  }
+  #entry-text p {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  #movie-list {
+    list-style: none;
+    width: 40rem;
+    max-width: 90%;
+    margin: 1rem auto;
+    padding: 0;
+  }
+  #background {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.759);
+    filter:  blur(1.5rem);
+    z-index: 10;
+    pointer-events: none;
+    display: none;
+    filter: grayscale(100%)
+    
+  }
+  #background.visible {
+    display: block;
+    pointer-events: all;
+  }
+  #add-modal .modal__content {
+    display: flex;
+    flex-direction: column;
+  }
+  #add-movie{
+    display: block;
+    position: relative;
+  }
+  #update-movie{
+    display: none;
+    position: relative;
+  }
+  @media (min-width: 768px) {
+    .modal {
+      width: 40rem;
+      left: calc(50% - 20rem);
+    }
+  }
+  @keyframes fade-slide-in {
+    from {
+      transform: translateY(-5rem);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+  .selected {
+    background: greenyellow;
+  }
